@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>Tourist Locations</title>
+</head>
+<body>
+    <h1>Tourist Locations</h1>
+    <h2>Selected Country: {{ form.country.value }}</h2>
+    <ul>
+        {% for location in tourist_locations %}
+            <li>{{ location.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+{% endblock body %}

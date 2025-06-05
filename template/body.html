@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+  
+{% include "home.html" %}
+<main id="main">
+    {% include "about.html" %}
+    {% include "services.html" %}
+    {% include "adventure.html" %}
+    {% include "team.html" %}
+    {% include "contact.html" %}
+</main><!-- End #main -->
+
+{% endblock body %}

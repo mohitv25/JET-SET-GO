@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>Select Country</title>
+</head>
+<body>
+    <h1>Select a Country</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+{% endblock body %}

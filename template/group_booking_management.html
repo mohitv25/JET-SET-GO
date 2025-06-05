@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Booking Management</title>
+</head>
+<body>
+    <h1>Group Booking Management</h1>
+    <div>
+        <h2>Active Group Bookings</h2>
+        <ul>
+            {% for booking in active_bookings %}
+            <li>{{ booking.destination }} - {{ booking.departure_date }} ({{ booking.total_participants }} participants)</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- Add forms and interactive elements for managing group bookings -->
+</body>
+{% endblock body %}

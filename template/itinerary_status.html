@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary Status</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Itinerary Status</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Destination</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Names</th>
+                    <th>Number of People</th>
+                    <th>Activities</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for itinerary in itineraries %}
+                <tr>
+                    <td>{{ itinerary.destination }}</td>
+                    <td>{{ itinerary.start_date }}</td>
+                    <td>{{ itinerary.end_date }}</td>
+                    <td>{{ itinerary.names }}</td>
+                    <td>{{ itinerary.num_people }}</td>
+                    <td>{{ itinerary.activities }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+{% endblock body %}
