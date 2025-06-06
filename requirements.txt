@@ -6,5 +6,7 @@ sqlparse==0.4.4
 tzdata==2024.1
 gunicorn
 python-dotenv
+dj-database-url
+
 
 
