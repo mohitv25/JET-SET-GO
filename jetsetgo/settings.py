@@ -75,7 +75,7 @@ db_host = os.getenv('DB_HOST', '127.0.0.1')
 db_port = os.getenv('DB_PORT', '3306')
 db_name = os.getenv('DB_NAME', '')
 
-DATABASE_URL = f"mysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+DATABASE_URL =  os.getenv('DATABASE_URL') #f"mysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 
 DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600),
@@ -99,7 +99,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+# Use Whitenoise storage for production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
