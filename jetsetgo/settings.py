@@ -15,7 +15,10 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'unsafe-secret-key-for-dev')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['jetsetgo.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['jetsetgo.onrender.com', 'www.jetsetgo.onrender.com', 'localhost', '127.0.0.1']
+
+
+
 
 
 
